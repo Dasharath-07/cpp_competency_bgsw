@@ -21,6 +21,7 @@ public:
   string cus_name;
   int car_speed;
 
+  // input the detailes of car
   void set_data ()
   {
     cout << "Enter the release year of the car: ";
@@ -31,6 +32,7 @@ public:
     cin >> car_speed;
   }
 
+  // display the Detailes about the car
   void get_data ()
   {
     cout << "---------------------------------------------------\n";
@@ -39,6 +41,7 @@ public:
       << "\n" << "initial car_speed:" << car_speed << endl;
   }
 
+  // accelerating the car speed when the accelerate fuction get call
   int accelerate (int uspeed)
   {
     uspeed += 10;
@@ -46,6 +49,7 @@ public:
     return uspeed;
   }
 
+  // deaccelerating the car speed when the brake fuction get call
   int brake (int dspeed)
   {
     if (dspeed > 0)
@@ -65,13 +69,15 @@ main ()
   c1.set_data ();
   c1.get_data ();
   uspeed = c1.car_speed;
+  //loop for accelarting the speed of car
   for (int j = 0; j < 5; j++)
-    {
-      uspeed = c1.accelerate (uspeed);
-      dspeed = uspeed;
-    }
+  {
+    uspeed = c1.accelerate (uspeed);
+    dspeed = uspeed;
+  }
+  //(brake)loop for deaccelarting the speed of car
   for (int j = 0; j < 5; j++)
-    {
-      dspeed = c1.brake (dspeed);
-    }
+  {
+    dspeed = c1.brake (dspeed);
+  }
 }
