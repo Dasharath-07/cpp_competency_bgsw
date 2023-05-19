@@ -45,7 +45,6 @@ public:
   int accelerate (int uspeed)
   {
     uspeed += 10;
-    cout << "When the accelerate the car Speed is: " << uspeed << endl;
     return uspeed;
   }
 
@@ -56,7 +55,6 @@ public:
       {
 	dspeed -= 10;
       }
-    cout << "When the decelerate the car Speed is: " << dspeed << endl;
     return dspeed;
   }
 
@@ -75,9 +73,12 @@ main ()
     uspeed = c1.accelerate (uspeed);
     dspeed = uspeed;
   }
+  cout << "After acceleration, car current Speed is: " << uspeed << endl;
+  
   //(brake)loop for deaccelarting the speed of car
   for (int j = 0; j < 5; j++)
   {
     dspeed = c1.brake (dspeed);
   }
+  cout << "After deaccelartion, car current Speed is: " << dspeed << endl;
 }
